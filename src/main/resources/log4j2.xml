@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  
+    <Loggers>
+        <!-- Nivells de log:
+     OFF
+     ALL
+     FATAL
+     ERROR
+     WARN
+     INFO
+     DEBUG
+     TRACE
+        -->
+    
+        <!-- Per defecte --> 
+        <Root level="OFF">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="Console" level="error" />
+        </Root>
+    
+        <!-- Hibernate -->
+        <Logger name="org.hibernate" level="erro" additivity="false">
+            <AppenderRef ref="Console" />   
+        </Logger>
+    
+        <!-- Lo demás -->
+        <Logger name="aplicacion" level="info" additivity="false">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="Console" level="error" />
+        </Logger>
+        <Logger name="datos" level="info" additivity="false">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="Console" level="error" />
+        </Logger>
+        <Logger name="presentation" level="info" additivity="false">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="Console" level="error" />
+        </Logger>
+        <Logger name="utils" level="info" additivity="false">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="Console" level="error" />
+        </Logger>
+    </Loggers>
+  
+
+    <Appenders>
+    
+        <!-- Sortida per pantalla -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%n%-5level : %msg%n%n" />
+        </Console>
+        
+
+    
+    </Appenders>
+  
+</Configuration>

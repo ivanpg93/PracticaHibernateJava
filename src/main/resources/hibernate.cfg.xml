@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- The dialect specifies the type of database used in hibernate so that hibernate generate appropriate type of SQL statements. For connecting any hibernate application with the database, it is required to provide the configuration of SQL dialect. -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.characterEncoding">utf8</property>
+        <mapping class="aplicacion.model.Aeronau"></mapping>
+        <mapping class="aplicacion.model.Autonoma"></mapping>
+        <mapping class="aplicacion.model.Combat"></mapping>
+        <mapping class="aplicacion.model.Dron"></mapping>
+        <mapping class="aplicacion.model.Mecanic"></mapping>
+        <mapping class="aplicacion.model.Missio"></mapping>
+        <mapping class="aplicacion.model.Pilot"></mapping>
+        <mapping class="aplicacion.model.Pilotada"></mapping>
+        <mapping class="aplicacion.model.Soldat"></mapping>
+        <mapping class="aplicacion.model.Transport"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
